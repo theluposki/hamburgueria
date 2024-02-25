@@ -1,0 +1,105 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css');
+
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+
+  outline: none;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  --white: #fff;
+
+  --dark1: #020E17;
+  --dark2: #021523;
+  --dark3: #0E2724;
+
+  --primary: #226650;
+  --secondary: #0F424F;
+
+  --yellow: #F09326;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  --minMax_height: 100vh;
+  --min-width: 320px;
+  --max-width: 1280px;
+
+  min-width: var(--min-width);
+  min-height: var(--minMax_height);
+  max-height: var(--minMax_height);
+  background-color: var(--dark1);
+}
+
+#app {
+  flex: 1;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  min-height: var(--minMax_height);
+  max-height: var(--minMax_height);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--dark1);
+  color: var(--white);
+
+  --padding-horizontal-global: 24px;
+
+  --minMax_height-navTop: 60px; 
+  
+  --minMax_widthNavLeft: 100px;
+  --minMax_heightNavLeft: calc(100vh - var(--minMax_height-navTop) - 20px);
+
+
+  --minMax_widthLogo: var(--minMax_widthNavLeft);
+
+  --minMax_widthMainM: calc(100vw - var(--minMax_widthNavLeft));
+  --minMax_heightMainM: calc(100vh - var(--minMax_height-navTop) - 20px);
+
+  --width_searchProducts: 100px;
+
+}
