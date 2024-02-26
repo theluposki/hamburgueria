@@ -24,7 +24,7 @@ import { RouterLink } from "vue-router";
           <i class="ri-notification-3-line"></i>
           <span>CHAMAR GARÇOM</span>
         </RouterLink>
-        <RouterLink to="/wallet" class="nav-link" exact-active-class="active">
+        <RouterLink to="/myAccount" class="nav-link" exact-active-class="active">
           <i class="ri-wallet-3-line"></i>
           <span>MINHA CONTA</span>
         </RouterLink>
@@ -142,5 +142,20 @@ import { RouterLink } from "vue-router";
   & .nav-link:active {
     scale: .98;
   }
+
+  & .active {
+    background-color: var(--tomato);
+  }
+}
+
+@media only screen and (max-width: 618px) {
+
+.actions {
+  & .nav-link {
+    & span {
+      display: none;
+    }
+  }
+}
 }
 </style>

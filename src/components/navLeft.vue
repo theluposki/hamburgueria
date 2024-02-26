@@ -5,23 +5,27 @@ import { RouterLink } from "vue-router";
 <template>
   <nav class="navLeft">
     <div class="actions">
-      <RouterLink to="/" class="nav-link">
+      <RouterLink to="/" class="nav-link" active-class="active">
         <img src="../assets/star.png" alt="star" />
         <span>DESTAQUES</span>
       </RouterLink>
-      <RouterLink to="/burgers" class="nav-link">
+      <RouterLink to="/burgers" class="nav-link" active-class="active">
         <img src="../assets/hamburguer.png" alt="star" />
         <span>HAMBURGER</span>
       </RouterLink>
-      <RouterLink to="/pizzas" class="nav-link">
+      <RouterLink to="/portions" class="nav-link" active-class="active">
+        <img src="../assets/porções.png" alt="star" />
+        <span>PORÇÕES</span>
+      </RouterLink>
+      <RouterLink to="/pizzas" class="nav-link" active-class="active">
         <img src="../assets/pizza.png" alt="star" />
         <span>PIZZA</span>
       </RouterLink>
-      <RouterLink to="/softDrinks" class="nav-link">
+      <RouterLink to="/softDrinks" class="nav-link" active-class="active">
         <img src="../assets/refrigerante.png" alt="star" />
         <span>REFRIGERANTE</span>
       </RouterLink>
-      <RouterLink to="/drinks" class="nav-link">
+      <RouterLink to="/drinks" class="nav-link" active-class="active">
         <img src="../assets/cerveja.png" alt="star" />
         <span>ALCOÓLICAS</span>
       </RouterLink>
@@ -93,8 +97,12 @@ import { RouterLink } from "vue-router";
       & span {
         font-size: 12px;
       }
-    }
 
+    }
+    & .active {
+      background-color: var(--tomato);
+    }
+    
     & .nav-link:hover {
       transition: color ease 0.4s;
       background-color: var(--yellow);
