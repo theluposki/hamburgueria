@@ -197,7 +197,9 @@ const updateContent = () => {
 }
 
 @media only screen and (max-width: 618px) {
-
+.searchProducts {
+  display: none;
+}
 .actions {
   & .nav-link {
     & span {
