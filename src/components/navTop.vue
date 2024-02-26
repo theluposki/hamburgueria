@@ -1,5 +1,29 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { ref } from 'vue';
+
+const editableContent = ref('BUSCAR');
+
+const clearText = () => {
+  const editableSpan = document.querySelector("[contenteditable='true']");
+  if (editableContent.value === 'BUSCAR') {
+    editableContent.value = '';
+    editableSpan.innerText = '';
+  }
+};
+
+const resetText = () => {
+  const editableSpan = document.querySelector("[contenteditable='true']");
+  if (!editableContent.value) {
+    editableContent.value = 'BUSCAR';
+    editableSpan.innerText = 'BUSCAR';
+  }
+};
+
+const updateContent = () => {
+  const editableSpan = document.querySelector("[contenteditable='true']");
+  editableContent.value = editableSpan.innerText;
+};
 </script>
 <template>
   <nav class="navTop">
@@ -16,7 +40,14 @@ import { RouterLink } from "vue-router";
 
       <div class="searchProducts">
         <i class="ri-search-2-line"></i>
-        <span>BUSCAR</span>
+        <span
+        ref="editableSpan"
+      contenteditable="true"
+      @focus="clearText"
+      @blur="resetText"
+      @input="updateContent"
+      @paste="handlePaste"
+    >BUSCAR</span>
       </div>
 
       <div class="actions">
@@ -105,6 +136,23 @@ import { RouterLink } from "vue-router";
   padding: 0 12px;
   font-size: 12px;
   cursor: pointer;
+
+  & span {
+    --minMaxWidthSpanSearch: 60px;
+    --minMaxHeightSpanSearch: 20px;
+    
+    min-width: var(--minMaxWidthSpanSearch);
+    max-width: var(--minMaxWidthSpanSearch);
+    min-height: var(--minMaxHeightSpanSearch);
+    max-height: var(--minMaxHeightSpanSearch);
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+  }
+  & span:focus {
+    cursor: text;
+  }
 }
 
 .actions {

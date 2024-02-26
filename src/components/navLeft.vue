@@ -51,17 +51,20 @@ import { RouterLink } from "vue-router";
   flex-direction: column;
   --minMaxHeightAssignment: 20px;
   & .actions {
-    min-height: calc(var(--minMax_heightNavLeft) - var(--minMaxHeightAssignment));
-    max-height: calc(var(--minMax_heightNavLeft) - var(--minMaxHeightAssignment));
+    min-height: calc(
+      var(--minMax_heightNavLeft) - var(--minMaxHeightAssignment)
+    );
+    max-height: calc(
+      var(--minMax_heightNavLeft) - var(--minMaxHeightAssignment)
+    );
     overflow-x: hidden;
     overflow-y: auto;
-    
+
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 2px;
-    background-color: var(--dark3);
-
+    
     --minMaxWidthHeightImgNavLink: 50px;
     --minMaxWidthHeightNavLink: var(--minMax_widthNavLeft);
 
@@ -97,12 +100,11 @@ import { RouterLink } from "vue-router";
       & span {
         font-size: 12px;
       }
-
     }
     & .active {
       background-color: var(--tomato);
     }
-    
+
     & .nav-link:hover {
       transition: color ease 0.4s;
       background-color: var(--yellow);
@@ -127,5 +129,35 @@ import { RouterLink } from "vue-router";
     font-size: 12px;
     font-weight: bold;
   }
+}
+
+@media only screen and (max-width: 618px) {
+  .navLeft {
+    min-width: var(--minMax_widthNavLeftMobile);
+    max-width: var(--minMax_widthNavLeftMobile);
+    & .actions {
+      & .nav-link {
+        min-width: var(--minMaxWidthHeightNavLinkMobile);
+        max-width: var(--minMaxWidthHeightNavLinkMobile);
+        min-height: var(--minMaxWidthHeightNavLinkMobile);
+        max-height: var(--minMaxWidthHeightNavLinkMobile);
+        gap: 2px;
+        & img {
+          min-width: var(--minMaxWidthHeightImgNavLinkMobile);
+          max-width: var(--minMaxWidthHeightImgNavLinkMobile);
+          min-height: var(--minMaxWidthHeightImgNavLinkMobile);
+          max-height: var(--minMaxWidthHeightImgNavLinkMobile);
+        }
+
+        & span {
+          font-size: 7px;
+        }
+      }
+    }
+    & .assignment {
+      font-size: 8px;
+    }
+  }
+
 }
 </style>

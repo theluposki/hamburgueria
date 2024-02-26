@@ -99,8 +99,15 @@ body {
   --minMax_widthLogo: var(--minMax_widthNavLeft);
 
   --minMax_widthMainM: calc(100vw - var(--minMax_widthNavLeft));
-  --minMax_heightMainM: calc(100vh - var(--minMax_height-navTop) - 20px);
+  --minMax_heightMainM: calc(100vh - var(--minMax_height-navTop); - 20px);
 
   --width_searchProducts: 100px;
 
+
+  --minMaxWidthHeightNavLinkMobile: 50px;
+  --minMax_widthNavLeftMobile: 50px;
+  --minMaxWidthHeightImgNavLinkMobile: 30px;
+
+  --minMax_widthMobileMainM: calc(100vw - var(--minMax_widthNavLeftMobile));
+  --minMax_heightMobileMainM: calc(100vh - var(--minMax_height-navTop));
 }
