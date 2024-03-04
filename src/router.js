@@ -9,6 +9,7 @@ const routes = [
   { path: "/pizzas", component: () => import("./views/Pizzas/pizzas.vue") },
   { path: "/softDrinks", component: () => import("./views/SoftDrinks/softDrinks.vue") },
   { path: "/drinks", component: () => import("./views/Drinks/drinks.vue") },
+  { path: "/dessert", component: () => import("./views/Dessert/dessert.vue") },
   { path: "/callWaiter", component: () => import("./views/CallWaiter/callWaiter.vue") },
   { path: "/myAccount", component: () => import("./views/MyAccount/myAccount.vue") },
   { path: "/cart", component: () => import("./views/Cart/Cart.vue") },

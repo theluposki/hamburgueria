@@ -10,24 +10,28 @@ import { RouterLink } from "vue-router";
         <span>DESTAQUES</span>
       </RouterLink>
       <RouterLink to="/burgers" class="nav-link" active-class="active">
-        <img src="../assets/hamburguer.png" alt="star" />
+        <img src="../assets/hamburguer.png" alt="hamburger" />
         <span>HAMBURGER</span>
       </RouterLink>
       <RouterLink to="/portions" class="nav-link" active-class="active">
-        <img src="../assets/porções.png" alt="star" />
+        <img src="../assets/porções.png" alt="porção" />
         <span>PORÇÕES</span>
       </RouterLink>
       <RouterLink to="/pizzas" class="nav-link" active-class="active">
-        <img src="../assets/pizza.png" alt="star" />
+        <img src="../assets/pizza.png" alt="pizzas" />
         <span>PIZZA</span>
       </RouterLink>
       <RouterLink to="/softDrinks" class="nav-link" active-class="active">
-        <img src="../assets/refrigerante.png" alt="star" />
+        <img src="../assets/refrigerante.png" alt="refrigerantes" />
         <span>REFRIGERANTE</span>
       </RouterLink>
       <RouterLink to="/drinks" class="nav-link" active-class="active">
-        <img src="../assets/cerveja.png" alt="star" />
+        <img src="../assets/cerveja.png" alt="alcoólicas" />
         <span>ALCOÓLICAS</span>
+      </RouterLink>
+      <RouterLink to="/dessert" class="nav-link" active-class="active">
+        <img src="../assets/sorvete.png" alt="sobremesa" />
+        <span>SOBREMESAS</span>
       </RouterLink>
     </div>
 

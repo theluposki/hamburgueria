@@ -202,6 +202,7 @@ const updateContent = () => {
 }
 .actions {
   & .nav-link {
+    min-width: 60px;
     & span {
       display: none;
     }
